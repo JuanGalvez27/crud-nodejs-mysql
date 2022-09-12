@@ -24,6 +24,8 @@ app.use(myConnection(mysql, {
   database: 'crudnodejsmysqlok'
 }, 'single'));
 
+app.use(express.urlencoded({extended: false}));
+
 // Routes
 app.use('/', customerRoutes);
 
